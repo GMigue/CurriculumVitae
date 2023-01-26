@@ -1,0 +1,112 @@
+html, body {
+    margin:0px;  
+    width: 98%;
+    overflow-x:hidden;
+}
+
+.PAT{
+    font-family: Gilroy;
+    font-size: 5vw;
+    margin-block-start: 2vw;
+    margin-block-end: 0px;
+    margin-inline-start: 2vw;
+    margin-inline-end: 2vw;
+
+}
+
+.PAS{
+    background-color: gray;
+  height: 4px;
+  width: 100%;
+  position: relative;
+  margin-left: 2vw;
+}
+
+.PAST{
+    font-family: Montserrat;
+    font-size: 2.5vw;
+    margin-block-start: 1vw;
+    margin-block-end: 1vw;
+    margin-inline-start: 4vw;
+    margin-inline-end: 4vw;
+}
+
+.PADTI{
+    position: relative;
+    display: inline-block;
+    margin-block-start: 6vw;
+}
+
+.PAIT{
+    width: 96vw;
+    margin: auto 2vw;
+    filter: blur(1px) opacity(.7);
+    
+}
+
+.PATT{
+    position: absolute;
+    font-family: Montserrat-Bold;
+    font-size: 5vw;
+    top: 0;
+    margin-block-start: 1vw;
+    margin-block-end: 1vw;
+    margin-inline-start: 5vw;
+    margin-inline-end: 5vw;;
+    text-shadow:
+   0 0 1px #ffffff,
+   -1px -1px 0 #ffffff,  
+   1px -1px 0 #ffffff,
+   -1px 1px 0 #ffffff,
+   1px 1px 0 #ffffff;
+}
+
+.PATX{
+    font-family: Montserrat;
+    font-size: 2vw;
+    margin-block-start: 1vw;
+    margin-block-end: 1vw;
+    margin-inline-start: 4vw;
+    margin-inline-end: 4vw;
+}
+
+.PAUL{
+    font-family: Montserrat;
+    font-size: 2vw;
+    margin-block-start: 1.5vw;
+    margin-block-end: 1.5vw;
+    margin-inline-start: 4vw;
+    margin-inline-end: 4vw;
+    list-style: square;
+}
+
+.PAL{
+    font-family: Montserrat-Bold;
+    font-size: 1.5vw;
+    margin-block-start: 5vw;
+    margin-block-end: 2vw;
+    margin-inline-start: 4vw;
+    margin-inline-end: 4vw;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Fonts/Montserrat-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'Montserrat-Bold';
+   src: url('../Fonts/Montserrat-Bold.ttf') format("truetype");
+   font-weight: bold;
+   font-style: bold;
+ }
+ 
+ @font-face {
+   font-family: 'Gilroy';
+   src: url('../Fonts/Gilroy-ExtraBold.otf') format("truetype");
+   font-weight: light;
+   font-style: light;
+ }
