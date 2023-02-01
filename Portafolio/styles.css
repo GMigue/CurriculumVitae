@@ -1,6 +1,6 @@
 html, body {
-    margin:0px;  
-    width: 98%;
+    margin:auto;  
+    width: 98vw;
     overflow-x:hidden;
 }
 
@@ -28,7 +28,7 @@ html, body {
     margin-block-start: 1vw;
     margin-block-end: 1vw;
     margin-inline-start: 4vw;
-    margin-inline-end: 4vw;
+    margin-inline-end: 0vw;
 }
 
 .PADTI{
@@ -42,6 +42,17 @@ html, body {
     margin: auto 2vw;
     filter: blur(1px) opacity(.7);
     
+}
+
+.PAI{
+    width: 98vw;
+    margin: auto 2vw;
+    filter: opacity(.8);
+    
+}
+
+iframe{
+    margin-top: 4vw;
 }
 
 .PATT{
@@ -67,7 +78,7 @@ html, body {
     margin-block-start: 1vw;
     margin-block-end: 1vw;
     margin-inline-start: 4vw;
-    margin-inline-end: 4vw;
+    margin-inline-end: 0vw;
 }
 
 .PAUL{
@@ -87,6 +98,19 @@ html, body {
     margin-block-end: 2vw;
     margin-inline-start: 4vw;
     margin-inline-end: 4vw;
+}
+#PAIF{
+    width: 98vw;
+    height: 55.125vw;
+}
+
+dt{
+    font-family: Montserrat-Bold;
+    font-size: 2vw;
+    margin-block-start: 1.5vw;
+    margin-block-end: 1vw;
+    margin-inline-start: 0vw;
+    margin-inline-end: 0vw;
 }
 
 

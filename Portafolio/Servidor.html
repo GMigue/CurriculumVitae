@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Linux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p class="PAT">SERVIDOR EN LINUX Y MONITOREO </p>
+    <div class="PAS"></div>
+    <p class="PAST">Implementación de un servidor web, FTP, DNS, de correo, SSH y creación de una zona desmilitarizada (DMZ) en Linux. Al igual que su posterior monitoreo para verificar fallas en la seguridad del servidor.</p>
+    <p style="margin: 30px;"></p>
+    <img class="PAI" src="Servidor\Servidor.png" alt="Servidor">
+    <p class="PATX">Como proyecto de investigación junior para el <b>II CONGRESO INTERNACIONAL DE CIENCIAS DE LA COMPUTACIÓN</b> y el <b>X CONGRESO NACIONAL DE CIENCIAS DE LA COMPUTACIÓN</b> trabaje en la creación de un servidor con las siguientes características:</p>
+    <dl class="PAUL">
+        <dt>Servidor Web</dt>
+        <dd>Para el servidor web que maneja paginas http y https se uso apache2 junto con OpenSSL para la creación del sitio https con el fin de crear un par de claves y certificado autofirmados. </dd>
+        <dt>Servidor FTP</dt>
+        <dd>Se utilizo el programa vsFTPD para el servidor FTP y se configuro para acceder a la carpeta del sitio web al cual por seguridad solo se podia acceder con un usuario y contraseña.</dd>
+        <dt>Servidor de correo</dt>
+        <dd>Se instalo postfix para el correo SMTP y para el poder visualizar y administrar el correo se utilizo dovecot-imap, squirrelmail y apache2 para crear una aplicación webmail.</dd>
+        <dt>Servidor SSH</dt>
+        <dd>Para poder acceder remotamente al servidor se creo un servidor SSH utilizando el programa OpenSSH.</dd>
+        <dt>Servidor DNS</dt>
+        <dd>En el caso del servidor DNS se utilizo Bind9. Se configuro como DNS maestro y se agrego los servicios http, https, ftp, ssh, smtp e imap.</dd>
+        <dt>Zona desmilitarizada (DMZ)</dt>
+        <dd>Para mejorar la seguridad del servidor y en especial los equipos que se encuentran en la red local se creo una zona desmilitarizada (DMZ). Esta fue configurada a través de iptables y redireccionando las peticiones del exterior a la DMZ.</dd>
+    </dl>
+    <p class="PATX">Una vez teniendo en funcionamiento el servidor se utilizo NMAP para ejecutar un script de vulnerabilidades al servidor, encontrando una vulnerabilidad de fuerza de grupo DH insuficiente en el intercambio de claves Diffie-Hellman en el puerto 25 (smtp).</p>
+    <p class="PATX">Teniendo identificada la vulnerabilidad se creo una clave  DH de 2048 bits con OpenSSL y se modifico la configuración de postfix para que usara el DH de 2048 y que evitara usar otros cifrados. Con lo anterior se corrigió el problema detectado.</p>
+    <p class="PATX">La presentación del proyecto completo junto al proceso de creación y configuración del servidor asi como al análisis de vulnerabilidad se encuentra en el siguiente video.</p>
+    <iframe id="PAIF" src="https://www.youtube-nocookie.com/embed/Hqxtd_YBrJM" title="SERVIDOR EN LINUX Y MONITOREO" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+    <p class="PAL">Linux, Apache, vsFTTP, Bind9, SquirrelMail, POSTFIX, DOVECOT, OpenSSH, NMAP</p>
+
+
+</body>
+</html>
