@@ -4,16 +4,25 @@ html, body {
     overflow-x:hidden;
 }
 
+p{
+    color: #3E4044;
+  }
+  
+a{
+    color: #000000;
+}
+
+/*  Titulo */
 .PAT{
     font-family: Gilroy;
-    font-size: 5vw;
+    font-size: calc(30px + 0.390625vw);
     margin-block-start: 2vw;
     margin-block-end: 0px;
     margin-inline-start: 2vw;
     margin-inline-end: 2vw;
+    color: #000;
 
 }
-
 .PAS{
     background-color: gray;
   height: 4px;
@@ -21,14 +30,15 @@ html, body {
   position: relative;
   margin-left: 2vw;
 }
-
+/*  Resumen */
 .PAST{
     font-family: Montserrat;
-    font-size: 2.5vw;
+    font-size: calc(18px + 0.390625vw);
     margin-block-start: 1vw;
     margin-block-end: 1vw;
     margin-inline-start: 4vw;
     margin-inline-end: 0vw;
+
 }
 
 .PADTI{
@@ -46,7 +56,7 @@ html, body {
 
 .PAI{
     width: 98vw;
-    margin: auto 2vw;
+    margin: 4vw 2vw;
     filter: opacity(.8);
     
 }
@@ -54,16 +64,17 @@ html, body {
 iframe{
     margin-top: 4vw;
 }
-
+/*  TituloImagen */
 .PATT{
     position: absolute;
     font-family: Montserrat-Bold;
-    font-size: 5vw;
+    font-size: calc(25px + 0.390625vw);
     top: 0;
     margin-block-start: 1vw;
     margin-block-end: 1vw;
     margin-inline-start: 5vw;
-    margin-inline-end: 5vw;;
+    margin-inline-end: 5vw;
+    color: #000;
     text-shadow:
    0 0 1px #ffffff,
    -1px -1px 0 #ffffff,  
@@ -71,29 +82,30 @@ iframe{
    -1px 1px 0 #ffffff,
    1px 1px 0 #ffffff;
 }
-
+/*  Texto */
 .PATX{
     font-family: Montserrat;
-    font-size: 2vw;
+    font-size: calc(16px + 0.390625vw);
     margin-block-start: 1vw;
     margin-block-end: 1vw;
     margin-inline-start: 4vw;
     margin-inline-end: 0vw;
 }
-
+/*  Listas */
 .PAUL{
     font-family: Montserrat;
-    font-size: 2vw;
+    font-size: calc(16px + 0.390625vw);
     margin-block-start: 1.5vw;
     margin-block-end: 1.5vw;
     margin-inline-start: 4vw;
     margin-inline-end: 4vw;
     list-style: square;
+    color: #3E4044;
 }
-
+/*  Tags */
 .PAL{
     font-family: Montserrat-Bold;
-    font-size: 1.5vw;
+    font-size: calc(12px + 0.390625vw);
     margin-block-start: 5vw;
     margin-block-end: 2vw;
     margin-inline-start: 4vw;
@@ -103,14 +115,15 @@ iframe{
     width: 98vw;
     height: 55.125vw;
 }
-
+/*  Listas descripcion */
 dt{
     font-family: Montserrat-Bold;
-    font-size: 2vw;
+    font-size: calc(16px + 0.390625vw);
     margin-block-start: 1.5vw;
     margin-block-end: 1vw;
     margin-inline-start: 0vw;
     margin-inline-end: 0vw;
+    color: #3E4044;
 }
 
 

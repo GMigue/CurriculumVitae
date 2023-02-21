@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Árboles de decisión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../Images/iconoCV.svg">
+
+</head>
+<body>
+    <p class="PAT">RED NEURONAL (CÁNCER DE MAMA)</p>
+    <div class="PAS"></div>
+    <p class="PAST">Creación de Red Neuronal para identificar el cancer de mama maligno a partir de los casos clínicos del Dr. William H. Wolberg</p>
+    <img class="PAI" src="RedNuronal/RN.png" alt="Red Neuronal en python">
+    <p class="PATX">Usando el conjunto de datos sobre cáncer de mama descargado del repositorio de aprendizaje automático de <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29" target="_blank" rel="noopener noreferrer">UCI</a> presentado por el Dr. William H. Wolberg.
+        El cual contiene 9 atributos que corresponden a la pruebas de diagnostico realizadas por el Dr. William a sus pacientes y 1 atributo destino el cual contiene si el cancer de mama es benigno o maligno.
+    </p>
+    <p class="PATX">El conjunto de datos descargado tenía 699 muestras originalmente. Dado que falta un atributo en 16 muestras, se eliminaron estas 16 muestras. Por lo tanto sólo hay 683 muestras. 500 ejemplos se utilizan como conjunto de datos de entrenamiento; el resto de 183 muestras se utilizarán como conjunto de datos de prueba para evaluar el rendimiento del modelo de red neuronal</p>
+    <img class="PAI" src="RedNuronal/Keras.png" alt="Red Neuronal en Keras">
+    <p class="PATX">Para la creación de la red neuronal se uso Keras que viene integrado en la biblioteca de Tensorﬂow. Esta red neuronal contiene 3 capas con las siguientes características:</p>
+    <dl class="PAUL">
+        <dt>Capa de entrada</dt>
+        <dd>La capa de entrada contiene 9 datos de entrada y 3 neuronas correspondientes a las salidas usando la función de activación ReLU.</dd>
+        <dt>Primera capa oculta</dt>
+        <dd>Solo contiene una capa oculta con 3 neuronas usando la función de activación ReLU.</dd>
+        <dt>Capa de salida</dt>
+        <dd>La capa de salida contiene 1 neurona que corresponde a la salida de la red neuronal y usando la función de activación Sigmoid. La salida obtenida sera un numero entre 0 y 1 que corresponde a la probabilidad de pertenecer al cáncer de mama benigno o maligno.</dd>
+    </dl>
+    <p class="PATX">Para la optimización se uso "Adam", una actualización del optimizador RMSProp (Root Mean Square Propagation) que se basa en un ratio de aprendizaje adaptativa. 
+        Para la función de coste se uso "Binary Cross-Entropy" (Entropía cruzada binaria).
+        Y por ultimo para la función de evaluación se uso "accuracy", ésta mide el porcentaje de casos que el modelo ha acertado.</p>
+    <p class="PATX">De la red neuronal obtenida con keras se observo que tiene una perdida de 0.0816 y un acierto del 96.8%.</p>
+    <img class="PAI" src="RedNuronal/PruebaRN.png" alt="Conjunto de prueba">
+    <p class="PATX">Evaluando el conjunto de 183 registros de prueba se obtuvo 125 datos en donde el cancer era benigno y fue predicho como benigno, 2 datos que eran benignos fueron predichos como malignos. 0 datos los predijo como benignos cuando eran malignos y 56 datos que eran malignos los predijo como malignos.</p>
+
+    <p class="PAL">Python: pandas, numpy, matplotlib, tensorﬂow, keras, sklearn</p>
+
+</body>
+</html>
