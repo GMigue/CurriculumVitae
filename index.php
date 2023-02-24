@@ -49,10 +49,10 @@ if (isset($_POST['enviar'])) {
     $msj .= "Mensaje: <p>$mensaje</p>";
     $msj .= "<p>Mensaje de formulario de CV web</p>";
 
-   // $mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);
 
     try {
-     /* $mail -> SMTPDebug = SMTP::DEBUG_OFF;
+      $mail -> SMTPDebug = SMTP::DEBUG_OFF;
       $mail -> isSMTP();
       $mail -> Host = 'smtp-mail.outlook.com';
       $mail -> SMTPAuth = true;
@@ -67,11 +67,11 @@ if (isset($_POST['enviar'])) {
       $mail -> Subject = 'Formulario de contacto';
       $mail -> Body = utf8_decode($msj);
 
-      $mail -> send();*/
+      $mail -> send();
 
 
     } catch (Exception $e) {
-      //$respuesta = 'Mensaje '.$mail->ErrorInfo;
+      $respuesta = 'Mensaje '.$mail->ErrorInfo;
     }
   }
 }
