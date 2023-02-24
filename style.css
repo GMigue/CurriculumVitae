@@ -834,7 +834,7 @@ input{
 
   /*  Competencias  */
   #CMALL{
-    width: 85vw;
+    width: calc(100vw - 11px);
     height: calc(100vh - 100px);
     display: grid;
     grid-template-rows: auto auto auto; 
@@ -843,16 +843,19 @@ input{
     margin-top: 50px;
     justify-items: start;
     overflow-y: auto;
-    margin-left: 10vw;
+    overflow-x: hidden;
+    padding-right: 10px;
   }
   #CMCompetencias{
     grid-column-start: 1;
     grid-column-end: 1;
     width: 100%;
+    margin-bottom: 40px;
   }
   #CMHabilidades, #CMIdiomas{
     align-self: start;
     width: 100%;
+    margin-top: auto;
   }
   .Comp{
     display: grid;
@@ -903,13 +906,17 @@ input{
     align-content: space-between;
     justify-content: space-evenly;
   }
-  #EEExp, #EEEdu{
-    margin: 0px;
+  #EEExp{
+    margin-inline: 0px 0px;
   }
   .EELIE, .EELIED{
     position: relative;
     left: 250px;
     opacity: 0;
+  }
+  #EEEdu{
+    margin-inline: 0px 0px;
+    margin-bottom: 60px;
   }
   .EET{
     margin-block: 10px 0px;
@@ -940,7 +947,7 @@ input{
   /*  Portafolio  */
   #PALL{
     width: 95vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 140px);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 0%;
@@ -964,7 +971,7 @@ input{
   /*  Contacto  */
   #ContactoFor, #ContactoEnv{
     width: 96vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     top: 50px;
     left: 2vw;
     display: flex;
@@ -988,7 +995,7 @@ input{
   }
   #CF{
     margin-top: 0px;
-    margin-bottom: auto;
+    margin-bottom: 50px;
   }
   .CDF, .CDFT{
     width: 100%;
@@ -1006,7 +1013,7 @@ input{
     width: fit-content;
   }
   #CFB{
-    height: 78px;
+    height: 40px;
     width: 304px;
   }
   #CET{

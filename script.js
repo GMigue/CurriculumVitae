@@ -1019,7 +1019,11 @@ window.addEventListener('load', (event) => {
     setTimeout(() => {
       CierraDerecha();
     }, 1800);
-    
+  }
+  let anuncio = document.querySelector("#container > div:nth-child(8)");
+  console.log(anuncio);
+  if(anuncio){
+    anuncio.style.display = "none";
   }
 });
 
@@ -1028,8 +1032,6 @@ window.onresize = ResizeW;
 function touchS(event) {
   
 }
-
-
 
 function touchMA(event) {
   //event.preventDefault(); 
@@ -1055,7 +1057,7 @@ function touchMA(event) {
         case "P5":
         case "P4":
         case "P2":
-          if(arrabb == 'A' || arrabb =="B"){
+          if(arrabb == 'A' || arrabb =="B" || arrabb == 'C'){
             if (touchM) {
               coor.push(event.targetTouches[0].pageX);
               coor.push(event.targetTouches[0].pageY);
@@ -1112,55 +1114,6 @@ function touchEA(event) {
             });
           }
         }
-
-        arrabb='';
-        switch (stackI[stackI.length-1].id) {
-          case "P5":
-            let p5 = document.getElementById("CMALL");
-            if(p5.scrollTop == 0){
-              arrabb = "B";
-            }
-            else{
-              if(p5.offsetHeight + p5.scrollTop >= p5.scrollHeight-1){
-                arrabb = "A";
-              }
-              else{
-                arrabb='';
-              }
-            } 
-          break;
-          case "P4":
-            let p4 = document.getElementById("EEALL");
-            if(p4.scrollTop == 0){
-              arrabb = "B";
-            }
-            else{
-              if(p4.offsetHeight + p4.scrollTop >= p4.scrollHeight-1){
-                arrabb = "A";
-              }
-              else{
-                arrabb='';
-              }
-            } 
-          break;
-          case "P2":
-            let p21 = document.getElementById("ContactoEnv");
-            let p22 = document.getElementById("ContactoFor");
-            if(p21.scrollTop == 0 || p22.scrollTop == 0){
-              arrabb = "B";
-            }
-            else{
-              if(p21.offsetHeight + p21.scrollTop >= p21.scrollHeight-1 || p22.offsetHeight + p22.scrollTop >= p22.scrollHeight-1){
-                arrabb = "A";
-              }
-              else{
-                arrabb='';
-              }
-            } 
-          break;
-          default:
-            break;
-        }
       }
       if (window.matchMedia("(orientation: landscape)").matches) {
         //Derecha
@@ -1206,46 +1159,79 @@ function touchEA(event) {
       switch (stackI[stackI.length-1].id) {
         case "P5":
           let p5 = document.getElementById("CMALL");
-          if(p5.scrollTop == 0){
-            arrabb = "B";
+          if(p5.offsetHeight == p5.scrollHeight){
+            arrabb = 'C'
           }
           else{
-            if(p5.offsetHeight + p5.scrollTop >= p5.scrollHeight-1){
-              arrabb = "A";
+            if(p5.scrollTop == 0){
+              arrabb = "B";
             }
             else{
-              arrabb='';
-            }
-          } 
+              if(p5.offsetHeight + p5.scrollTop >= p5.scrollHeight-1){
+                arrabb = "A";
+              }
+              else{
+                arrabb='';
+              }
+            } 
+          }
+          
         break;
         case "P4":
           let p4 = document.getElementById("EEALL");
-          if(p4.scrollTop == 0){
-            arrabb = "B";
+          if(p4.offsetHeight == p4.scrollHeight){
+            arrabb = 'C'
           }
           else{
-            if(p4.offsetHeight + p4.scrollTop >= p4.scrollHeight-1){
-              arrabb = "A";
+            if(p4.scrollTop == 0){
+              arrabb = "B";
             }
             else{
-              arrabb='';
-            }
-          } 
+              if(p4.offsetHeight + p4.scrollTop >= p4.scrollHeight-1){
+                arrabb = "A";
+              }
+              else{
+                arrabb='';
+              }
+            } 
+          }
+          
         break;
         case "P2":
           let p21 = document.getElementById("ContactoEnv");
           let p22 = document.getElementById("ContactoFor");
-          if(p21.scrollTop == 0 || p22.scrollTop == 0){
-            arrabb = "B";
+          if(p21.offsetHeight == p21.scrollHeight){
+            arrabb = 'C'
           }
           else{
-            if(p21.offsetHeight + p21.scrollTop >= p21.scrollHeight-1 || p22.offsetHeight + p22.scrollTop >= p22.scrollHeight-1){
-              arrabb = "A";
+            if(p21.scrollTop == 0){
+              arrabb = "B";
             }
             else{
-              arrabb='';
+              if(p21.offsetHeight + p21.scrollTop >= p21.scrollHeight-1){
+                arrabb = "A";
+              }
+              else{
+                arrabb='';
+              }
+            } 
+          }
+          if(p22.offsetHeight == p22.scrollHeight){
+            arrabb = 'C'
+          }
+          else{
+            if(p22.scrollTop == 0){
+              arrabb = "B";
             }
-          } 
+            else{
+              if(p22.offsetHeight + p22.scrollTop >= p22.scrollHeight-1){
+                arrabb = "A";
+              }
+              else{
+                arrabb='';
+              }
+            } 
+          }
         break;
         default:
           break;
