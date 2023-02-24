@@ -952,6 +952,23 @@
 
   }
 
+  function animRevForm() {
+    console.log("Entra")
+    let formul = document.getElementById('ContactoFor');
+
+    anime({
+      targets: formul,
+      opacity: 1,
+      left: '45px',
+      duration: 1200,
+      begin: function(anim) {
+        formul.style.opacity = 0;
+        formul.style.display = "flex";
+        formul.style.left = "-1000px"; 
+      },
+    });
+  }
+
   function posicionesTar() {
     if (window.matchMedia("(orientation: portrait)").matches) {
       //Abajo
@@ -980,6 +997,8 @@
   }
   
   }
+
+  
 
 
 //Agrega index en z a taerjetas
@@ -1019,11 +1038,6 @@ window.addEventListener('load', (event) => {
     setTimeout(() => {
       CierraDerecha();
     }, 1800);
-  }
-  let anuncio = document.querySelector("#container > div:nth-child(8)");
-  console.log(anuncio);
-  if(anuncio){
-    anuncio.style.display = "none";
   }
 });
 

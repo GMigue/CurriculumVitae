@@ -128,10 +128,10 @@ if (isset($_POST['enviar'])) {
         </div>
         <button id="CEBR" onclick="animRevForm()">Enviar otro</button>
       </div>
-      <div class="scroll" id="ContactoFor"<?php 
+      <div id="ContactoFor"<?php 
                   if (isset($errors)) {
                     if (count($errors)==0) {
-                      echo "style='display:none; left:-100px'";
+                      echo "style='display:none;'";
                     }
                   }
                 ?> >
