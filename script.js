@@ -953,20 +953,36 @@
   }
 
   function animRevForm() {
-    console.log("Entra")
     let formul = document.getElementById('ContactoFor');
 
-    anime({
-      targets: formul,
-      opacity: 1,
-      left: '45px',
-      duration: 1200,
-      begin: function(anim) {
-        formul.style.opacity = 0;
-        formul.style.display = "flex";
-        formul.style.left = "-1000px"; 
-      },
-    });
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      anime({
+        targets: formul,
+        opacity: 1,
+        top: '50px',
+        duration: 1200,
+        begin: function(anim) {
+          formul.style.opacity = 0;
+          formul.style.display = "flex";
+          formul.style.top = "-500px"; 
+        },
+      });
+    }
+    if (window.matchMedia("(orientation: landscape)").matches) { 
+      anime({
+        targets: formul,
+        opacity: 1,
+        left: '45px',
+        duration: 1200,
+        begin: function(anim) {
+          formul.style.opacity = 0;
+          formul.style.display = "flex";
+          formul.style.left = "-1000px"; 
+        },
+      });
+    }
+
+   
   }
 
   function posicionesTar() {
